@@ -16,6 +16,8 @@ SRC_URI = "file://minecraft_server.jar;unpack=0 file://minecraft-server.service"
 
 # NOTE: no Makefile found, unable to determine what needs to be done
 
+RDEPENDS:${PN} += "java"
+
 inherit allarch systemd
 SYSTEMD_PACKAGES = "${PN}"
 SYSTEMD_SERVICE:${PN} = "minecraft-server.service"
