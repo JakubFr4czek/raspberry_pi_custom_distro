@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run -it -v $(pwd):/var/yocto --rm --workdir /var/yocto --name yoctobuilder ubuntu:22.04 bash
+docker run -i -v $(pwd):/var/yocto --rm --workdir /var/yocto --name yoctobuilder ubuntu:22.04 bash
