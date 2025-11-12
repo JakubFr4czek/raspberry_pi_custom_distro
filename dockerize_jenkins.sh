@@ -1,3 +1,2 @@
 #!/bin/bash
-
-sudo docker run -v $(pwd):/var/yocto --rm --workdir /var/yocto --name yoctobuilder ubuntu:22.04 bash -c "./build.sh"
+docker build -t yocto-ubuntu . && docker run -it --rm -v $(pwd):/var/yocto --workdir /var/yocto yocto-ubuntu bash -c "./build.sh"
