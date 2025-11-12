@@ -12,7 +12,7 @@
 LICENSE = "CLOSED"
 LIC_FILES_CHKSUM = ""
 
-SRC_URI = "file://minecraft_server.jar;unpack=0 file://minecraft-server.service"
+SRC_URI = "file://minecraft_server.jar;unpack=0 file://minecraft-server.service file://eula.txt"
 
 # NOTE: no Makefile found, unable to determine what needs to be done
 
@@ -36,6 +36,7 @@ do_compile () {
 do_install () {
 	install -d ${D}/var/minecraft/server
 	install -m 0755 ${WORKDIR}/minecraft_server.jar ${D}/var/minecraft/server
+	install -m 0755 ${WORKDIR}/eula.txt ${D}/var/minecraft/server
 
 	install -d ${D}${systemd_system_unitdir}
     install -m 0644 ${WORKDIR}/minecraft-server.service ${D}${systemd_system_unitdir}

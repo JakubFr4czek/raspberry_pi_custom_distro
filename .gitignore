@@ -1,4 +1,4 @@
 poky/
 cache/
-core-image-full-cmdline-raspberrypi4.rootfs.wic
+core-image-full-cmdline-raspberrypi4-64.rootfs.wic
 bitbake-cookerdaemon.log
